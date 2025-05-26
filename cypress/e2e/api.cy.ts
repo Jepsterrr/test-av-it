@@ -2,7 +2,7 @@ describe('API Routes', () => {
   it('GET /api/users/1', () => {
     cy.request('/api/users/1')
       .its('status').should('eq', 200)
-      .its('body').should('deep.equal', { id: '1', name: 'John Doe' })
+      .its('body').should('deep.equal', { id: '1', name: 'Mia Svensson' })
   })
 
   it('POST /api/users', () => {

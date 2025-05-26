@@ -13,13 +13,13 @@ describe('Inloggning', () => {
   })
 
   it('ogiltiga uppgifter ger felmeddelande', () => {
-    cy.get('[data.cy=input-username]').type('wrong')
+    cy.get('[data-cy=input-username]').type('wrong')
     cy.get('[data-cy=input-password]').type('nope')
     cy.get('[data-cy=btn-submit]').click()
     cy.contains('Fel användarnamn eller lösen').should('be.visible')
   })
 
   it('a11y check på login-formulär', () => {
-    cy.checkA11y('#login-form')
+    cy.get('[data-cy=login-form]').checkA11y();
   })
 })
