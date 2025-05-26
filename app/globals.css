@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #e7b185;
+    --foreground: #000000;
   }
 }
 
@@ -23,4 +23,95 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color: #00326b;
+  margin-top: 2rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 150px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form#login-form {
+  background: #f9fafb;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form#login-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+form#login-form label {
+  font-weight: 500;
+  color: #00326b;
+  margin-bottom: 0.2rem;
+}
+
+form#login-form input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+form#login-form input:focus {
+  border-color: #00326b;
+  outline: none;
+}
+
+form#login-form button.button {
+  margin-top: 1rem;
+}
+
+[role="alert"] {
+  color: #d32f2f;
+  background: #fff0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
 }

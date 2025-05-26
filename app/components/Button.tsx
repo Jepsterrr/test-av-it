@@ -8,7 +8,7 @@ interface ButtonProps {
 export default function Button({ children, onClick }: ButtonProps) {
   return (
     <button
-      id="generic-button"
+      data-cy="generic-button"
       onClick={onClick}
       style={{
         padding: '0.5rem 1rem',

@@ -14,7 +14,7 @@ export default function Login() {
     if (user === 'test' && pass === 'password') {
       router.push('/dashboard')
     } else {
-      setError('Fel användarnamn eller lösen')
+      setError('Fel användarnamn eller lösenord')
     }
   }
 
@@ -27,10 +27,10 @@ export default function Login() {
           <input id="username" value={user} onChange={e => setUser(e.target.value)} />
         </div>
         <div>
-          <label htmlFor="password">Lösen</label>
+          <label htmlFor="password">Lösenord</label>
           <input id="password" type="password" value={pass} onChange={e => setPass(e.target.value)} />
         </div>
-        <button type="submit">Submit</button>
+        <button className="button" type="submit">Submit</button>
       </form>
       {error && <p role="alert">{error}</p>}
     </main>
