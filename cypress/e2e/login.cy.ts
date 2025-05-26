@@ -5,17 +5,17 @@ describe('Inloggning', () => {
   })
 
   it('loggar in med giltiga uppgifter', () => {
-    cy.get('#username').type('test')
-    cy.get('#password').type('password')
-    cy.get('button[type=submit]').click()
+    cy.get('[data-cy=input-username]').type('test')
+    cy.get('[data-cy=input-password]').type('password')
+    cy.get('[data-cy=btn-submit]').click()
     cy.url().should('include', '/dashboard')
     cy.contains('Välkommen test!').should('be.visible')
   })
 
   it('ogiltiga uppgifter ger felmeddelande', () => {
-    cy.get('#username').type('wrong')
-    cy.get('#password').type('nope')
-    cy.get('[type=submit]').click()
+    cy.get('[data.cy=input-username]').type('wrong')
+    cy.get('[data-cy=input-password]').type('nope')
+    cy.get('[data-cy=btn-submit]').click()
     cy.contains('Fel användarnamn eller lösen').should('be.visible')
   })
 

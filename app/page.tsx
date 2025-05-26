@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <main style={{ padding: '2rem' }}>
       <h1>Välkommen till Test-app!</h1>
-      <p className='button'><Link href="/login">Logga in</Link></p>
+      <Link href="/login" passHref>
+        <p className="button">Logga in</p>
+      </Link>
     </main>
   )
 }
