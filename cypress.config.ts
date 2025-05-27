@@ -28,5 +28,6 @@ export default defineConfig({
     },
     supportFile: 'cypress/support/component.ts',
     specPattern: 'cypress/component/**/*.cy.tsx',
+    indexHtmlFile: 'cypress/support/component-index.html',
   },
 })

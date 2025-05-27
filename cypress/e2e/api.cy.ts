@@ -1,13 +1,20 @@
 describe('API Routes', () => {
-  it('GET /api/users/1', () => {
-    cy.request('/api/users/1')
-      .its('status').should('eq', 200)
-      .its('body').should('deep.equal', { id: '1', name: 'Mia Svensson' })
-  })
+  it('GET users 1', () => {
+    cy.request('/api/users/1').then((response) => {
+      expect(response.status).to.equal(200);
+      expect(response.body).to.deep.equal({
+        id: '1',
+        name: 'Mia Svensson'
+      });
+    });
+  });
 
-  it('POST /api/users', () => {
+
+  it('POST users', () => {
     cy.request('POST', '/api/users', { name: 'Alice' })
-      .its('status').should('eq', 201)
-      .its('body').should('have.property', 'id')
-  })
+      .then((response) => {
+        expect(response.status).to.equal(201);
+        expect(response.body).to.have.property('id');
+      });
+  });
 })

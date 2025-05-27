@@ -38,7 +38,7 @@ export default function RootLayout({
         </nav>
 
         <div className="container mx-auto p-4">
-          <main className="box">
+          <main className="box" data-cy-root>
             {children}
           </main>
         </div>
