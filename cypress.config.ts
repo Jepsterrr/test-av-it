@@ -4,6 +4,8 @@ const { lighthouse, prepareAudit } = require('@cypress-audit/lighthouse')
 export default defineConfig({
   projectId: 'imhm9e',
   video: true,
+  screenshotsFolder: 'cypress/screenshots',
+  videosFolder: 'cypress/videos',
   e2e: {
     baseUrl: 'http://localhost:3000',
     supportFile: 'cypress/support/e2e.ts',
