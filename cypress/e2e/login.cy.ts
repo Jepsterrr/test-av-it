@@ -21,6 +21,6 @@ describe('Inloggning', () => {
 
   it('a11y check på login-formulär', () => {
     cy.injectAxe() // Injektera axe för a11y-kontroller
-    cy.get('[data-cy=login-form]').checkA11y(); // Kör audit med trösklar
+    cy.checkA11y(); // Kör audit
   })
 })

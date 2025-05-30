@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header className="p-4 border-b">
-          <h1 className="text-xl font-bold my-2">Test Av IT</h1>
+          <h1 className="text-xl font-bold my-2 titel">Test Av IT</h1>
         </header>
 
         <nav className="navbar">

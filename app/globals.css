@@ -2,8 +2,8 @@
 
 :root {
   --primary-color: #004d99;
-  --secondary-color: #007bff;
-  --button-hover-color: #1c70ca;
+  --secondary-color: #005A9E; /* Ändrad från #007bff */
+  --button-hover-color: #004C85; /* Ändrad från #1c70ca */
   --accent-color: #98e8fc; 
   --background-light: #f8f9fa; 
   --background-dark: #e9ecef;
@@ -11,23 +11,9 @@
   --text-color-light: #ffffff;
   --border-color: #ced4da;
   --error-color: #dc3545; 
-  --navbar-bg: #2377cc;
-  --navbar-link-color: #242424;
-  --navbar-link-hover: #000000;
-}
-
-/* Anpassning för mörkt läge */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #172a3a;
-    --secondary-color: #0056b3;
-    --background-light: #2c3e50;
-    --background-dark: #34495e;
-    --text-color-dark: #ecf0f1;
-    --text-color-light: #ffffff;
-    --border-color: #555;
-    --error-color: #ef5350;
-  }
+  --navbar-bg: #004d99; /* Ändrad från #2377cc */
+  --navbar-link-color: #ffffff; /* Ändrad från #242424 */
+  --navbar-link-hover: #000000; /* Behållen, fungerar bra med ny hover-bakgrund */
 }
 
 body {
@@ -65,6 +51,11 @@ h1 {
   color: var(--primary-color);
 }
 
+/* Anpassning för titel i navbar */
+.titel {
+  color: var(--text-color-light);
+}
+
 .navbar {
   background-color: var(--navbar-bg);
   padding: 0.8rem 1rem;
@@ -95,7 +86,7 @@ h1 {
 }
 
 .navbar-link:hover {
-  background-color: rgba(0, 123, 255, 0.1);
+  background-color: rgba(0, 123, 255, 0.1); /* Ljusblå transparent overlay */
   color: var(--navbar-link-hover);
   transform: translateY(-2px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
