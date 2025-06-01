@@ -34,6 +34,11 @@ export default function RootLayout({
                 Logga in
               </Link>
             </li>
+            <li className="navbar-item">
+              <Link href="/essay" className="navbar-link">
+                Rapport
+              </Link>
+            </li>
           </ul>
         </nav>
 
