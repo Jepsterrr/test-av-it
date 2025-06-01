@@ -67,7 +67,11 @@ export default function Essay() {
 
         {/* Modal för testanalys */}
         {modalData && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={(e) => { if (e.target === e.currentTarget) setModalData(null); }}>
+        <div
+          className="fixed inset-0 flex items-center justify-center z-50 p-4"
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.40)' }}
+          onClick={(e) => { if (e.target === e.currentTarget) setModalData(null); }}
+        >
             <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
                 <div className="p-6">
                     <div className="flex justify-between items-center mb-4">

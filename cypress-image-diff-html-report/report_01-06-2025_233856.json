@@ -1,0 +1,31 @@
+{
+  "total": 1,
+  "totalPassed": 1,
+  "totalFailed": 0,
+  "totalSuites": 1,
+  "suites": [
+    {
+      "name": "visual.cy.ts",
+      "path": "cypress\\e2e\\visual.cy.ts",
+      "tests": [
+        {
+          "status": "pass",
+          "name": "visual.cy.ts-homepage",
+          "percentage": 0,
+          "failureThreshold": 0,
+          "specPath": "cypress\\e2e\\visual.cy.ts",
+          "specFilename": "visual.cy.ts",
+          "baselinePath": "cypress-image-diff-screenshots\\baseline\\visual.cy.ts-homepage.png",
+          "diffPath": "",
+          "comparisonPath": "cypress-image-diff-screenshots\\comparison\\visual.cy.ts-homepage.png"
+        }
+      ]
+    }
+  ],
+  "startedAt": "2025-06-01T21:38:56.222Z",
+  "endedAt": "2025-06-01T21:39:28.364Z",
+  "duration": 8693,
+  "browserName": "electron",
+  "browserVersion": "130.0.6723.137",
+  "cypressVersion": "14.4.0"
+}
