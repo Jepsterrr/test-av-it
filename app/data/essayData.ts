@@ -87,8 +87,8 @@ export const testData = [
     type: 'Prestanda',
     title: 'Mäta prestanda på startsidan med Lighthouse',
     status: 'pass',
-    chartData: { performance: 82, accessibility: 98 }, // Från rapporten s.24 (bild) & s.27 (text)
-    thresholds: { performance: 80, accessibility: 90 }, // Från rapporten s.24 (test plan) & s.27 (text) 
+    chartData: { performance: 82, accessibility: 98 },
+    thresholds: { performance: 80, accessibility: 90 },
     analysis: [ // Analys baserad på Kap 5.2.6
         "Testet passerade: Lighthouse-poäng för prestanda (82) och tillgänglighet (98) översteg tröskelvärdena (80 respektive 90).",
         "Indikerar att startsidans prestanda och grundläggande tillgänglighet (enligt Lighthouse) ligger inom acceptabla gränser.",
