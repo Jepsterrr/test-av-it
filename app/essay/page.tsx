@@ -1,20 +1,21 @@
 'use client'
 
 import React, { useState } from 'react';
-// Importera dina framtida komponenter
+
 import OverviewSection from '../components/essay/OverviewSection';
+import CypressDeepDiveSection from '../components/essay/CypressDeepDiveSection';
 import ResultSection from '../components/essay/ResultSection';
-import DiscussionSection from '../components/essay/DiscussionSection'; // Exempel
-import { testData } from '../data/essayData'; // Antag att du flyttar datan hit
-import type { TestDataType } from '../components/essay/ResultSection'; // Importera typen
+import DiscussionSection from '../components/essay/DiscussionSection';
+import { testData } from '../data/essayData';
+import type { TestDataType } from '../components/essay/ResultSection';
 
 export default function Essay() {
-  const [activeSection, setActiveSection] = useState<'oversikt' | 'resultat' | 'diskussion'>('oversikt');
+  const [activeSection, setActiveSection] = useState<'oversikt' | 'resultat' | 'fordjupning' | 'diskussion'>('oversikt');
   const [activeFilter, setActiveFilter] = useState<string>('Alla');
   const [modalData, setModalData] = useState<TestDataType | null>(null); // Typa modalData korrekt
 
   // Funktioner för att byta sektion (liknande `Maps` i HTML-exemplet)
-  const handleNavClick = (sectionId: 'oversikt' | 'resultat' | 'diskussion') => {
+  const handleNavClick = (sectionId: 'oversikt' | 'resultat' | 'fordjupning' | 'diskussion') => {
     setActiveSection(sectionId);
   };
 
@@ -32,6 +33,14 @@ export default function Essay() {
                 className={`px-4 py-2 rounded-md font-medium transition-colors ${activeSection === 'oversikt' ? 'bg-[#1e3a8a] text-white' : 'text-gray-700 hover:bg-gray-100'}`}
               >
                 Översikt
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleNavClick('fordjupning')}
+                className={`px-3 py-2 sm:px-4 text-sm sm:text-base rounded-md font-medium transition-colors ${activeSection === 'fordjupning' ? 'bg-[#1e3a8a] text-white shadow-lg' : 'text-gray-700 hover:bg-gray-200'}`}
+              >
+                Fördjupning Cypress
               </button>
             </li>
             <li>
@@ -63,6 +72,7 @@ export default function Essay() {
             setModalData={setModalData}
           />
         )}
+        {activeSection === 'fordjupning' && <CypressDeepDiveSection />}
         {activeSection === 'diskussion' && <DiscussionSection />}
 
         {/* Modal för testanalys */}

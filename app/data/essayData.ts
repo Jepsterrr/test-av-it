@@ -73,7 +73,7 @@ export const testData = [
     id: 'TC_A11Y_LOGINFORM_001',
     type: 'Tillgänglighet',
     title: 'Identifiera WCAG-överträdelser på inloggningssidan',
-    status: 'fixed',
+    status: 'fail',
     analysis: [ // Analys baserad på Kap 5.2.5 och 6.4
       "Initialt misslyckande: `cypress-axe` identifierade problem med färgkontrast ('color-contrast on 4 Nodes').",
       "Signifikant fynd: Indikerade tillgänglighetsbrister som kunde försvåra användning för personer med visuella funktionsnedsättningar.",
