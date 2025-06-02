@@ -35,6 +35,7 @@ export default function DiscussionSection() {
           <ul className="list-disc list-inside space-y-2 text-gray-700">
             <li><span className="font-semibold">Anpassning av visuella tester:</span> Kan kräva manuell konfiguration för dynamiska/utvecklingsspecifika element; en inneboende utmaning.</li>
             <li><span className="font-semibold">Tillförlitlighet hos automatiserade verktyg:</span> Kan inte identifiera alla problem; kan ge falska positiva/negativa. Olika verktyg har olika fokus (jmf. Lighthouse vs. cypress-axe).</li>
+            <li><span className="font-semibold">Inlärningskurva:</span> Du behöver kunskap över JS/TS, lära dig vilka olika metoder som finns samt förstå vad utskrifterna betyder.</li>
             <li><span className="font-semibold">Prestandatestning:</span> Lighthouse ger en ögonblicksbild; kan behöva kompletteras med mer omfattande verktyg för kontinuerlig övervakning.</li>
           </ul>
         </div>
